@@ -39,8 +39,10 @@ var jsSRCadmin        = './src/admin/js/ik-myplugin-admin.js';
 var jsSRCfront        = './src/front/js/ik-myplugin-front.js';
 var jsURL        = './assets/';
 
-var styleWatch   = './src/scss/**/*.scss';
-var jsWatch      = './src/js/**/*.js';
+var styleWatchAdmin   = './src/admin/scss/**/*.scss';
+var styleWatchFront   = './src/front/scss/**/*.scss';
+var jsWatchAdmin     = './src/admin/js/**/*.js';
+var jsWatchFront     = './src/front/js/**/*.js';
 var phpWatch     = './**/*.php';
 
 // Tasks
@@ -107,9 +109,9 @@ function triggerPlumber( src, url ) {
 
 function watch_files() {
 
-	gulp.watch( [styleSRCadmin, styleSRCfront], gulp.series(css ));
-	gulp.watch( [ jsSRCadmin, jsSRCfront ],  gulp.series( jsAdmin, jsFront, reload));
-	gulp.src( jsURL + 'ik-myplugin-admin.js')
+	gulp.watch( [styleWatchAdmin, styleWatchFront], gulp.series(css ));
+	gulp.watch( [ jsWatchAdmin, jsWatchFront ],  gulp.series( jsAdmin, jsFront));
+	gulp.src( jsURL + 'ik-myplugin-admin.js',jsURL + 'ik-myplugin-front.js')
 		.pipe( notify({ message: 'Gulp is Watching, Happy Coding!' }) );
 }
 
