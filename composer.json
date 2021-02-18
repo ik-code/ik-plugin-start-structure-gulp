@@ -1,0 +1,19 @@
+{
+    "name": "ik/ik-plugin",
+    "description": "My AAAmazing plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Ihor Khaletksyi",
+            "email": "igo.metacon@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./inc"
+        }
+    }
+}
