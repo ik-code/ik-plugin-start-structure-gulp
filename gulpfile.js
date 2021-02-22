@@ -108,7 +108,7 @@ function triggerPlumber( src, url ) {
 }
 
 function watch_files() {
-
+	gulp.watch( [phpWatch], reload );
 	gulp.watch( [styleWatchAdmin, styleWatchFront], gulp.series(css ));
 	gulp.watch( [ jsWatchAdmin, jsWatchFront ],  gulp.series( jsAdmin, jsFront));
 	gulp.src( jsURL + 'ik-myplugin-admin.js',jsURL + 'ik-myplugin-front.js')

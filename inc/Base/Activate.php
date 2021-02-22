@@ -12,5 +12,15 @@ class Activate
 
         flush_rewrite_rules();
 
+        if( get_option( 'ik_plugin') ){
+            return;
+        }
+
+        $default = array();
+
+        update_option( 'ik_plugin', $default );
+
+
+
     }
 }

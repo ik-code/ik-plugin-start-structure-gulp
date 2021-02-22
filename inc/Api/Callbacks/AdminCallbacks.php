@@ -28,15 +28,15 @@ class AdminCallbacks extends BaseController
         return require_once( "$this->plugin_path/templates/admin/widget.php" );
     }
 
-    public function ikOptionsGroup($input)
-    {
-        return $input;
-    }
-
-    public function ikAdminSection()
-    {
-        echo 'Check this beautiful section!';
-    }
+//    public function ikOptionsGroup($input)
+//    {
+//        return $input;
+//    }
+//
+//    public function ikAdminSection()
+//    {
+//        echo 'Check this beautiful section!';
+//    }
 
     public function ikTextExample()
     {
